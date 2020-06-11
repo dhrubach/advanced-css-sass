@@ -1,0 +1,30 @@
+{
+	"name": "advanced-css-sass",
+	"version": "0.0.0",
+	"description": "repository of mini-apps showcasing advanced css concepts. based on udemy course by Jonas Schmedtmann",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dhrubach/advanced-css-sass.git"
+	},
+	"keywords": [
+		"css",
+		"sass",
+		"flexbox",
+		"cssgrid"
+	],
+	"author": "dhruba chatterjee",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/dhrubach/advanced-css-sass/issues"
+	},
+	"homepage": "https://github.com/dhrubach/advanced-css-sass#readme",
+	"devDependencies": {
+		"prettier": "^2.0.5",
+		"stylelint": "^13.6.0",
+		"stylelint-config-prettier": "^8.0.1",
+		"stylelint-prettier": "^1.1.2"
+	}
+}
