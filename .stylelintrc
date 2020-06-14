@@ -1,0 +1,9 @@
+{
+	extends: "stylelint-prettier/recommended",
+	rules: {
+		"declaration-no-important": true,
+		"declaration-empty-line-before": null,
+		"indentation": "tab",
+		"at-rule-no-unknown": null
+	}
+}
