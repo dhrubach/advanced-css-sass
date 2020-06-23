@@ -1,0 +1,28 @@
+.row {
+	max-width: $grid-width;
+	margin: 0 auto;
+
+	background-color: #eee;
+
+	@include clearfix();
+
+	&:not(:last-child) {
+		margin-bottom: $gutter-vertical;
+	}
+}
+
+.col {
+	float: left;
+
+	background-color: red;
+
+	&:not(:last-child) {
+		margin-right: $gutter-horizontal;
+	}
+}
+
+//* 4 columns grid system
+@include make-col(4);
+
+//* 3 columns grid system
+@include make-col(3);
