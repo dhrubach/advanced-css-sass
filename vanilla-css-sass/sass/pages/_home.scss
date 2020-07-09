@@ -1,0 +1,10 @@
+//* 'ABOUT' section
+
+.app-about {
+	&__content {
+		margin-top: -20vh;
+		padding: 20rem 0;
+
+		background-color: $color-grey-light-1;
+	}
+}

@@ -7,3 +7,25 @@ body {
 	color: $color-grey-dark;
 	background-color: $color-white;
 }
+
+//* 'ABOUT' section
+
+.app-about-header {
+	&__title {
+		font-size: 3.5rem;
+		font-weight: 700;
+
+		display: inline-block;
+
+		text-transform: uppercase;
+
+		//* trick : necessary to set a transparent color so that background image gradient is visible
+		color: transparent;
+		background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+
+		//* defines how an element's background extends underneath -
+		//* border-box, content-box, padding-box, text
+		-webkit-background-clip: text;
+		        background-clip: text;
+	}
+}
