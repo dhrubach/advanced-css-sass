@@ -1,0 +1,128 @@
+//* header section
+
+.app__header {
+	position: relative;
+
+	height: 95vh;
+
+	background-image: linear-gradient(
+			to right bottom,
+			rgba($color-primary-light, 0.8),
+			rgba($color-primary-dark, 0.808)
+		),
+		url(./../assets/images/hero.jpg);
+	background-position: top;
+	background-size: cover;
+
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+//* application logo - header section
+
+.app-header__logo {
+	position: absolute;
+	top: 4rem;
+	left: 4rem;
+}
+
+.app-header-logo__item {
+	height: 3.5rem;
+}
+
+//* primary & secondary title - header section
+
+.app-header__title {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+
+	/* trick : center it inside the parent container */
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+	backface-visibility: hidden;
+}
+
+.app-header-title__item {
+	margin-bottom: 6rem;
+
+	text-transform: uppercase;
+
+	color: $color-white;
+}
+
+.app-header-title__primary {
+	font-size: 6rem;
+	font-weight: 400;
+
+	display: block;
+
+	animation: move-in-left 1s ease-in-out;
+	letter-spacing: 3.5rem;
+}
+
+.app-header-title__secondary {
+	font-size: 2rem;
+	font-weight: 700;
+
+	display: block;
+
+	animation: move-in-right 1s ease-in-out;
+	letter-spacing: 1.75rem;
+}
+
+//* 'discover' action button - header section
+
+.app-header-title__link {
+	position: relative;
+
+	display: inline-block;
+
+	padding: 1.5rem 4rem;
+
+	animation: move-in-bottom 0.5s ease-in-out 0.5s;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: $color-grey-dark;
+	border-radius: 10rem;
+	background-color: $color-white;
+
+	animation-fill-mode: backwards;
+}
+
+.app-header-title__link:hover {
+	transform: translateY(-1rem);
+
+	box-shadow: 0 2rem 2rem rgba($color-black, 0.2);
+}
+
+.app-header-title__link:active {
+	transform: translateY(-0.3rem);
+
+	box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+}
+
+.app-header-title__link::after {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+
+	display: inline-block;
+
+	width: 100%;
+	height: 100%;
+
+	content: '';
+	transition: all 0.4s;
+
+	border-radius: 10rem;
+	background-color: $color-white;
+}
+
+.app-header-title__link:hover::after {
+	transform: scaleX(1.4) scaleY(1.6);
+
+	opacity: 0;
+}

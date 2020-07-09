@@ -1,0 +1,22 @@
+@mixin clearfix () {
+	&::after {
+		display: table;
+		clear: both;
+
+		content: '';
+	}
+}
+
+@mixin make-col($columns) {
+	@for $i from 1 through ($columns - 1) {
+		$total-gutter-space: #{$columns - 1} * #{$gutter-horizontal};
+		$single-col-width: calc((100% - #{$total-gutter-space}) / #{$columns});
+
+		.col-#{$i}-#{$columns} {
+			width: calc(
+				(#{$single-col-width} * #{$i}) +
+					((#{$i} - 1) * #{$gutter-horizontal})
+			);
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.btn-link {
+	display: inline-block;
+
+	text-decoration: none;
+
+	color: $color-primary-default;
+	border-bottom: 1px solid $color-primary-default;
+
+	&:hover {
+		font-size: 1.4rem;
+
+		padding: 0.5rem;
+
+		transform: translateY(-0.5rem);
+
+		color: $color-white;
+		background-color: $color-primary-default;
+		box-shadow: 0 2rem 1.4rem rgba($color-black, 0.2);
+	}
+
+	&:active {
+		transform: translateY(-0.3rem);
+
+		box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+	}
+}

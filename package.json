@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"description": "repository of mini-apps showcasing advanced css concepts. based on udemy course by Jonas Schmedtmann",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"compile:sass": "node-sass vanilla-css-sass/sass/main.scss vanilla-css-sass/css/style.css -w"
 	},
 	"repository": {
 		"type": "git",
@@ -22,6 +22,7 @@
 	},
 	"homepage": "https://github.com/dhrubach/advanced-css-sass#readme",
 	"devDependencies": {
+		"node-sass": "^4.14.1",
 		"prettier": "^2.0.5",
 		"stylelint": "^13.6.0",
 		"stylelint-config-prettier": "^8.0.1",

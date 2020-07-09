@@ -1,0 +1,15 @@
+/* scrollbar */
+
+body.default-theme::-webkit-scrollbar,
+body.default-theme ::-webkit-scrollbar {
+	width: 7px;
+	height: 7px;
+
+	background: #98a3a3;
+}
+
+body.default-theme::-webkit-scrollbar-thumb,
+body.default-theme ::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: #2c4628;
+}
