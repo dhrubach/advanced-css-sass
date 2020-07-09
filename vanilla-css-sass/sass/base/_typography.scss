@@ -18,14 +18,32 @@ body {
 		display: inline-block;
 
 		text-transform: uppercase;
-
 		//* trick : necessary to set a transparent color so that background image gradient is visible
+
 		color: transparent;
 		background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-
 		//* defines how an element's background extends underneath -
 		//* border-box, content-box, padding-box, text
 		-webkit-background-clip: text;
 		        background-clip: text;
+	}
+}
+
+.app-about-main-text {
+	&__header {
+		font-size: 1.6rem;
+		font-weight: 700;
+
+		margin-bottom: 1.5rem;
+
+		text-transform: uppercase;
+	}
+
+	&__content {
+		font-size: 1.6rem;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
 	}
 }

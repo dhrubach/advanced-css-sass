@@ -30,6 +30,17 @@ body {
   -webkit-background-clip: text;
   background-clip: text; }
 
+.app-about-main-text__header {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase; }
+
+.app-about-main-text__content {
+  font-size: 1.6rem; }
+  .app-about-main-text__content:not(:last-child) {
+    margin-bottom: 2rem; }
+
 @keyframes move-in-left {
   0% {
     transform: translateX(-10rem);
@@ -63,6 +74,49 @@ body {
 
 .u-margin-bottom-8 {
   margin-bottom: 8rem; }
+
+.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #55c57a;
+  border-bottom: 1px solid #55c57a; }
+  .btn-link:hover {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    transform: translateY(-0.5rem);
+    color: #fff;
+    background-color: #55c57a;
+    box-shadow: 0 2rem 1.4rem rgba(0, 0, 0, 0.2); }
+  .btn-link:active {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    position: absolute;
+    z-index: 10;
+    width: 55%;
+    transition: all 0.2s;
+    border-radius: 0.3rem;
+    outline-offset: 2rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
+    .composition__photo--p1 {
+      top: -2rem;
+      left: 0; }
+    .composition__photo--p2 {
+      top: 2rem;
+      right: 0; }
+    .composition__photo--p3 {
+      top: 10rem;
+      left: 15%; }
+    .composition__photo:hover {
+      z-index: 12;
+      transform: scale(1.05) translateY(-1rem);
+      outline: 1.5rem solid #55c57a;
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
+  .composition:hover > .composition__photo:not(:hover) {
+    transform: scale(0.9); }
 
 /* scrollbar */
 body.default-theme::-webkit-scrollbar,
