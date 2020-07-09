@@ -1,4 +1,4 @@
-/* reset elements */
+//* reset elements
 
 *,
 *::before,
@@ -8,13 +8,19 @@
 	padding: 0;
 }
 
-/* global style */
+//* global style
 
 html {
+	//* set root font-size to 62.5% of browser default.
+	//* since browser default is mostly set to 16px,
+	//* this will scale down root font-size to 10px.
+	//* Thus, '1rem' unit will be set to '10px'
 	font-size: 62.5%;
 }
 
 body {
+	//* set box-sizing on <body> element and let the value be
+	//* inherited across the page
 	box-sizing: border-box;
 	padding: 3rem;
 }

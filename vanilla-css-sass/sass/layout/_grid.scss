@@ -2,7 +2,7 @@
 	max-width: $grid-width;
 	margin: 0 auto;
 
-	background-color: #eee;
+	background-color: transparent;
 
 	@include clearfix();
 
@@ -13,8 +13,6 @@
 
 .col {
 	float: left;
-
-	background-color: red;
 
 	&:not(:last-child) {
 		margin-right: $gutter-horizontal;
