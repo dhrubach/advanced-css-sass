@@ -118,6 +118,32 @@ body {
   .composition:hover > .composition__photo:not(:hover) {
     transform: scale(0.9); }
 
+.app-features__card {
+  height: 320px;
+  padding: 2.5rem;
+  transition: all 0.4s;
+  text-align: center;
+  border-radius: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  .app-features__card:hover {
+    transform: translateY(-2rem) scale(1.03); }
+
+.app-features-card__icon {
+  font-size: 5.5rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: transparent;
+  background-image: linear-gradient(to right, #7ed56fcc, #28b485);
+  -webkit-background-clip: text;
+  background-clip: text; }
+
+.app-features-card__header {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase; }
+
 /* scrollbar */
 body.default-theme::-webkit-scrollbar,
 body.default-theme ::-webkit-scrollbar {
@@ -246,3 +272,13 @@ body.default-theme ::-webkit-scrollbar-thumb {
   margin-top: -20vh;
   padding: 20rem 0;
   background-color: #f7f7f7; }
+
+.app-features__content {
+  margin-top: -13vh;
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.808)), url(./../assets/images/nat-4.jpg);
+  background-position: top;
+  background-size: cover;
+  transform: skewY(-7deg); }
+  .app-features__content > * {
+    transform: skewY(7deg); }
