@@ -1,0 +1,75 @@
+//* 'TOURS' section
+
+.app-tours {
+	&__card {
+		position: relative;
+
+		height: 50rem;
+
+		//* 'perspective' is always applied on the parent element
+		-webkit-perspective: 150rem;
+			perspective: 150rem;
+
+		&:hover {
+			.app-tours-card--front {
+				transform: rotateY(180deg);
+			}
+
+			//* back card is flipped by default
+			//* reset to default on hover
+			.app-tours-card--back {
+				transform: rotateY(0);
+			}
+		}
+	}
+}
+
+.app-tours-card {
+	&__item {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 50rem;
+
+		transition: all 1s ease;
+
+		border-radius: 0.3rem;
+		box-shadow: 0 1.5rem 4.5rem rgba($color-black, 0.15);
+
+		backface-visibility: hidden;
+	}
+
+	&--front {
+		background-color: $color-white;
+	}
+
+	&--back {
+		transform: rotateY(-180deg);
+
+		&--sea {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-primary-light, 0.8),
+				rgba($color-primary-dark, 0.808)
+			);
+		}
+
+		&--forest {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-secondary-light, 0.8),
+				rgba($color-secondary-dark, 0.808)
+			);
+		}
+
+		&--snow {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-tertiary-light, 0.8),
+				rgba($color-tertiary-dark, 0.808)
+			);
+		}
+	}
+}
