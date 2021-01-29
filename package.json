@@ -22,11 +22,10 @@
 	},
 	"homepage": "https://github.com/dhrubach/advanced-css-sass#readme",
 	"devDependencies": {
-		"lodash": "^4.17.19",
-		"node-sass": "^4.14.1",
-		"prettier": "^2.0.5",
-		"stylelint": "^13.6.0",
-		"stylelint-config-prettier": "^8.0.1",
+		"node-sass": "^5.0.0",
+		"prettier": "^2.2.1",
+		"stylelint": "^13.9.0",
+		"stylelint-config-prettier": "^8.0.2",
 		"stylelint-prettier": "^1.1.2"
 	}
 }
