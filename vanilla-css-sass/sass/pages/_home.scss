@@ -16,6 +16,8 @@
 		margin-top: -13vh;
 		padding: 20rem 0;
 
+		transform: skewY(-7deg);
+
 		background-image: linear-gradient(
 				to right bottom,
 				rgba($color-primary-light, 0.8),
@@ -25,10 +27,25 @@
 		background-position: top;
 		background-size: cover;
 
-		transform: skewY(-7deg);
-
-		>* {
+		> * {
 			transform: skewY(7deg);
 		}
+	}
+}
+
+//* 'TOURS' section
+
+.app-tours {
+	&__content {
+		margin-top: -13vh;
+		padding: 20rem 0 5rem 0;
+
+		background-color: $color-grey-light-1;
+	}
+}
+
+.app-tours-content {
+	&__row {
+		height: 55rem;
 	}
 }

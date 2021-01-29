@@ -9,8 +9,10 @@ body {
 }
 
 //* 'ABOUT' section
+//* 'TOURS' section
 
-.app-about-header {
+.app-about-header,
+.app-tours-header {
 	&__title {
 		font-size: 3.5rem;
 		font-weight: 700;
@@ -18,10 +20,11 @@ body {
 		display: inline-block;
 
 		text-transform: uppercase;
-		//* trick : necessary to set a transparent color so that background image gradient is visible
 
+		//* trick : necessary to set a transparent color so that background image gradient is visible
 		color: transparent;
 		background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+
 		//* defines how an element's background extends underneath -
 		//* border-box, content-box, padding-box, text
 		-webkit-background-clip: text;

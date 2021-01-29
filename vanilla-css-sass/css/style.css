@@ -20,7 +20,8 @@ body {
   color: #777;
   background-color: #fff; }
 
-.app-about-header__title {
+.app-about-header__title,
+.app-tours-header__title {
   font-size: 3.5rem;
   font-weight: 700;
   display: inline-block;
@@ -144,18 +145,6 @@ body {
   margin-bottom: 1.5rem;
   text-transform: uppercase; }
 
-/* scrollbar */
-body.default-theme::-webkit-scrollbar,
-body.default-theme ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-  background: #98a3a3; }
-
-body.default-theme::-webkit-scrollbar-thumb,
-body.default-theme ::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background: #2c4628; }
-
 .app__header {
   position: relative;
   height: 95vh;
@@ -237,6 +226,100 @@ body.default-theme ::-webkit-scrollbar-thumb {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0; }
 
+/* scrollbar */
+body.default-theme::-webkit-scrollbar,
+body.default-theme ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background: #98a3a3; }
+
+body.default-theme::-webkit-scrollbar-thumb,
+body.default-theme ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #2c4628; }
+
+.app-tours__card {
+  position: relative;
+  height: 52rem;
+  -webkit-perspective: 150rem;
+  perspective: 150rem; }
+  .app-tours__card:hover .app-tours-card--front {
+    transform: rotateY(180deg); }
+  .app-tours__card:hover .app-tours-card--back {
+    transform: rotateY(0); }
+
+.app-tours-card__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 52rem;
+  transition: all 1s ease;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4.5rem rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden; }
+
+.app-tours-card--front {
+  background-color: #fff; }
+
+.app-tours-card--back {
+  transform: rotateY(-180deg); }
+  .app-tours-card--back--sea {
+    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.808)); }
+  .app-tours-card--back--forest {
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.808)); }
+  .app-tours-card--back--snow {
+    background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.808)); }
+
+.app-tours-card__image {
+  height: 23rem;
+  background-size: cover;
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+  .app-tours-card__image--sea {
+    background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../assets/images/nat-5.jpg"); }
+  .app-tours-card__image--forest {
+    background-image: linear-gradient(to right bottom, #7ed56fcc, #28b485), url("../assets/images/nat-6.jpg"); }
+  .app-tours-card__image--snow {
+    background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../assets/images/nat-7.jpg"); }
+
+.app-tours-card__header {
+  font-size: 2.8rem;
+  font-weight: 300;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 60%;
+  text-align: right;
+  text-transform: uppercase;
+  color: #fff; }
+
+.app-tours-card__details {
+  padding: 3rem; }
+  .app-tours-card__details ul {
+    width: 80%;
+    margin: 0 auto;
+    list-style: none; }
+    .app-tours-card__details ul li {
+      font-size: 1.5rem;
+      padding: 1rem;
+      text-align: center; }
+      .app-tours-card__details ul li:not(:last-child) {
+        border-bottom: 1px solid #eee; }
+
+.app-tours-header__text {
+  padding: 1rem 1.5rem;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone; }
+  .app-tours-header__text--sea {
+    background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .app-tours-header__text--forest {
+    background-image: linear-gradient(to right bottom, #7ed56fcc, #28b485); }
+  .app-tours-header__text--snow {
+    background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -276,9 +359,17 @@ body.default-theme ::-webkit-scrollbar-thumb {
 .app-features__content {
   margin-top: -13vh;
   padding: 20rem 0;
+  transform: skewY(-7deg);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.808)), url(./../assets/images/nat-4.jpg);
   background-position: top;
-  background-size: cover;
-  transform: skewY(-7deg); }
+  background-size: cover; }
   .app-features__content > * {
     transform: skewY(7deg); }
+
+.app-tours__content {
+  margin-top: -13vh;
+  padding: 20rem 0 5rem 0;
+  background-color: #f7f7f7; }
+
+.app-tours-content__row {
+  height: 55rem; }
