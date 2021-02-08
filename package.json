@@ -3,7 +3,12 @@
 	"version": "0.0.0",
 	"description": "repository of mini-apps showcasing advanced css concepts. based on udemy course by Jonas Schmedtmann",
 	"scripts": {
-		"compile:sass": "node-sass vanilla-css-sass/sass/main.scss vanilla-css-sass/css/style.css -w"
+		"watch:sass:vanilla": "node-sass vanilla-css-sass/sass/main.scss vanilla-css-sass/css/style.css -w",
+		"watch:sass:grid": "node-sass css-grid/sass/main.scss css-grid/css/style.css -w",
+		"compile:sass:grid": "node-sass css-grid/sass/main.scss css-grid/css/style.comp.css",
+		"prefix:css:grid": "postcss --use autoprefixer -b 'last 5 versions' css-grid/css/style.comp.css -o css-grid/css/style.prefix.css",
+		"compress:css:grid": "node-sass css-grid/css/style.prefix.css css-grid/css/style.css --output-style compressed",
+		"build:css:grid": "npm-run-all compile:sass:grid prefix:css:grid compress:css:grid"
 	},
 	"repository": {
 		"type": "git",
@@ -22,10 +27,16 @@
 	},
 	"homepage": "https://github.com/dhrubach/advanced-css-sass#readme",
 	"devDependencies": {
+		"autoprefixer": "^10.2.4",
 		"node-sass": "^5.0.0",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^8.3.1",
 		"prettier": "^2.2.1",
 		"stylelint": "^13.9.0",
 		"stylelint-config-prettier": "^8.0.2",
 		"stylelint-prettier": "^1.1.2"
-	}
+	},
+	"browserlist": [
+		"defaults"
+	]
 }
