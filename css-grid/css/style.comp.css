@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  box-sizing: border-box;
+  color: #6d5d4b; }
+
+.l-container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr; }
+
+.c-features {
+  background-color: #aaa; }
+
+.c-footer {
+  background-color: #101d2c; }
+
+.c-gallery {
+  background-color: #54483a; }
+
+.c-header {
+  background-color: #54483a; }
+
+.c-homes {
+  background-color: #101d2c; }
+
+.c-realtors {
+  background-color: #101d2c; }
+
+.c-sidebar {
+  background-color: #c69963; }
+
+.c-story__pictures {
+  background-color: #c69963; }
+
+.c-story__content {
+  background-color: #f9f7f6; }
