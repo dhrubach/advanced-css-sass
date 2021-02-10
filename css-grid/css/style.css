@@ -18,15 +18,43 @@ body {
   line-height: 1.6;
   color: #6d5d4b; }
 
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: #f9f7f6; }
+  .heading-4--dark {
+    color: #54483a; }
+
 .l-container {
   display: grid;
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [feature-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [feature-end] 1fr [full-end];
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [feature-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [feature-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content); }
 
 .c-features {
-  background-color: #aaa;
+  display: grid;
+  align-items: start;
+  margin: 15rem 0;
   grid-column: feature-start / feature-end;
-  grid-row: 2 / 3; }
+  grid-gap: 6rem;
+  grid-row: 2 / 3;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
+  .c-features__item {
+    display: grid;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2.5rem;
+    grid-template-columns: min-content 1fr; }
+  .c-features__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: translateY(-1rem);
+    fill: #c69963;
+    grid-row: 1 / span 2; }
+  .c-features__text {
+    font-size: 1.6rem; }
 
 .c-footer {
   background-color: #101d2c;
