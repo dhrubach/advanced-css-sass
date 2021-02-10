@@ -1,3 +1,6 @@
 .c-features {
 	background-color: $color-grey-light-2;
+
+	grid-column: feature-start / feature-end;
+	grid-row: 2 / 3;
 }
