@@ -2,9 +2,11 @@
 
 @import 'base/base';
 @import 'base/typography';
+@import 'base/utilities';
 
 @import 'layout/layout';
 
+@import 'components/button';
 @import 'components/features';
 @import 'components/footer';
 @import 'components/gallery';

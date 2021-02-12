@@ -22,6 +22,20 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1; }
+  .heading-2--light {
+    color: #f9f7f6; }
+  .heading-2--dark {
+    color: #54483a; }
+
+.heading-3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #c69963; }
+
 .heading-4 {
   font-size: 1.9rem; }
   .heading-4--light {
@@ -29,10 +43,30 @@ body {
   .heading-4--dark {
     color: #54483a; }
 
+.u-margin-bottom-sm {
+  margin-bottom: 2rem; }
+
+.u-margin-bottom-md {
+  margin-bottom: 3rem; }
+
 .l-container {
   display: grid;
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [feature-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [feature-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content); }
+
+.btn {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.2sec;
+  text-transform: uppercase;
+  color: #f9f7f6;
+  border: none;
+  border-radius: 0;
+  background-color: #c69963; }
+  .btn:hover {
+    background-color: #b28451; }
 
 .c-features {
   display: grid;
@@ -87,6 +121,15 @@ body {
   grid-row: 3 / 4; }
 
 .c-story__content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 8vw;
   background-color: #f9f7f6;
   grid-column: col-start 5 / full-end;
   grid-row: 3 / 4; }
+
+.c-story-content__text {
+  font-size: 1.5rem;
+  font-style: italic; }
