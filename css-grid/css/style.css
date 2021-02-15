@@ -103,8 +103,54 @@ body {
   grid-column: full-start / col-end 6; }
 
 .c-homes {
-  background-color: #101d2c;
-  grid-column: feature-start / feature-end; }
+  display: grid;
+  margin: 15rem 0;
+  grid-column: feature-start / feature-end;
+  grid-gap: 7rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
+  .c-homes__item {
+    display: grid;
+    background-color: #f9f7f6;
+    grid-row-gap: 3.5rem;
+    grid-template-columns: repeat(2, 1fr); }
+  .c-homes__image {
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2; }
+  .c-homes__like {
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem;
+    fill: #c69963;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end; }
+  .c-homes__name {
+    font-size: 1.6rem;
+    line-height: 2.2;
+    align-self: flex-end;
+    width: 80%;
+    transform: translateY(2rem);
+    text-align: center;
+    color: #fff;
+    background-color: #101d2c;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-self: center; }
+  .c-homes__location, .c-homes__room, .c-homes__area, .c-homes__price {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 1.5rem; }
+    .c-homes__location > svg, .c-homes__room > svg, .c-homes__area > svg, .c-homes__price > svg {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+      fill: #c69963; }
+  .c-homes__contact {
+    grid-column: 1 / -1; }
 
 .c-realtors {
   background-color: #101d2c;

@@ -1,5 +1,81 @@
 .c-homes {
-	background-color: $color-secondary;
+	display: grid;
+
+	margin: 15rem 0;
 
 	grid-column: feature-start / feature-end;
+	grid-gap: 7rem;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+	&__item {
+		display: grid;
+
+		background-color: $color-grey-light-1;
+
+		grid-row-gap: 3.5rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&__image {
+		width: 100%;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+	}
+
+	&__like {
+		z-index: 2;
+
+		width: 2.5rem;
+		height: 2.5rem;
+		margin: 1rem;
+
+		fill: $color-primary;
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		justify-self: end;
+	}
+
+	&__name {
+		font-size: 1.6rem;
+		line-height: 2.2;
+
+		align-self: flex-end;
+
+		width: 80%;
+
+		transform: translateY(2rem);
+		text-align: center;
+
+		color: #fff;
+		background-color: $color-secondary;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+		justify-self: center;
+	}
+
+	&__location,
+	&__room,
+	&__area,
+	&__price {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: nowrap;
+
+		margin-left: 1.5rem;
+
+		> svg {
+			width: 2rem;
+			height: 2rem;
+			margin-right: 1rem;
+
+			fill: $color-primary;
+		}
+	}
+
+	&__contact {
+		grid-column: 1 / -1;
+	}
 }
