@@ -1,3 +1,33 @@
 .c-features {
-	background-color: $color-grey-light-2;
+	display: grid;
+	align-items: start;
+
+	margin: 15rem 0;
+
+	grid-column: feature-start / feature-end;
+	grid-gap: 6rem;
+	grid-row: 2 / 3;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+	&__item {
+		display: grid;
+
+		grid-column-gap: 1.5rem;
+		grid-row-gap: 2.5rem;
+		grid-template-columns: min-content 1fr;
+	}
+
+	&__icon {
+		width: 4.5rem;
+		height: 4.5rem;
+
+		transform: translateY(-1rem);
+
+		fill: $color-primary;
+		grid-row: 1 / span 2;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+	}
 }
