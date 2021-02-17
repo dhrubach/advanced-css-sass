@@ -91,8 +91,38 @@ body {
     font-size: 1.6rem; }
 
 .c-footer {
+  padding: 8rem;
   background-color: #101d2c;
   grid-column: full-start / full-end; }
+
+.c-nav {
+  display: grid;
+  align-items: center;
+  list-style: none;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+  .c-nav__link:link, .c-nav__link:visited {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.4rem;
+    display: block;
+    padding: 1.5rem;
+    transition: all 0.2s;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff; }
+  .c-nav__link:hover, .c-nav__link:active {
+    transform: translateY(-1rem);
+    background-color: rgba(255, 255, 255, 0.05); }
+
+.c-copyright {
+  font-size: 1.4rem;
+  width: 70%;
+  margin-top: 6rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: #aaa; }
 
 .c-gallery {
   display: grid;
