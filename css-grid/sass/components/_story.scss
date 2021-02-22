@@ -12,7 +12,6 @@
 		background-size: cover;
 
 		grid-column: full-start / col-end 4;
-		grid-row: 3 / 4;
 		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(6, 1fr);
 	}
@@ -28,7 +27,6 @@
 		background-color: $color-grey-light-1;
 
 		grid-column: col-start 5 / full-end;
-		grid-row: 3 / 4;
 	}
 }
 
