@@ -6,7 +6,6 @@
 
 	grid-column: feature-start / feature-end;
 	grid-gap: 6rem;
-	grid-row: 2 / 3;
 	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
 	&__item {

@@ -1,3 +1,5 @@
+@import './../abstract/variables';
+
 .c-sidebar {
 	display: flex;
 	justify-content: center;
@@ -6,6 +8,14 @@
 
 	grid-column: sidebar-start / sidebar-end;
 	grid-row: 1 / -1;
+
+	@media only screen and (max-width: $bp-large) {
+		align-items: center;
+		justify-content: flex-end;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+	}
 
 	&__button {
 		width: 4.5rem;
@@ -34,6 +44,19 @@
 
 		&::after {
 			transform: translateY(1.3rem);
+		}
+
+		@media only screen and (max-width: $bp-large) {
+			margin-top: 0;
+			margin-right: 2.5rem;
+
+			&::before {
+				transform: translateY(-1.3rem);
+			}
+
+			&::after {
+				transform: translateY(1.1rem);
+			}
 		}
 	}
 }

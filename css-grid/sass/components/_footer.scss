@@ -1,3 +1,5 @@
+@import './../abstract/variables';
+
 .c-footer {
 	padding: 8rem;
 
@@ -14,6 +16,10 @@
 
 	grid-gap: 2rem;
 	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+	@media only screen and (max-width: 58.125em) {
+		grid-template-columns: repeat(3, minmax(15rem, 1fr));
+	}
 
 	&__link:link,
 	&__link:visited {

@@ -1,13 +1,20 @@
+@import './../abstract/variables';
+
 .c-realtors {
 	display: grid;
 	align-content: center;
-	justify-content: center;
 
 	background-color: $color-secondary;
 
 	grid-column: col-start 7 / full-end;
 	grid-row-gap: 2rem;
 	justify-items: center;
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 4rem;
+
+		grid-column: 1 / -1;
+	}
 
 	&__list {
 		display: grid;
@@ -16,6 +23,10 @@
 		grid-column-gap: 2rem;
 		grid-row-gap: 5vh;
 		grid-template-columns: min-content max-content;
+
+		@media only screen and (max-width: $bp-medium) {
+			grid-template-columns: repeat(3, min-content max-content);
+		}
 	}
 
 	&__img {
