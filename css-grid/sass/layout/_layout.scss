@@ -27,7 +27,7 @@
 	}
 
 	@media only screen and (max-width: $bp-medium) {
-		grid-template-rows: 6rem calc(92vh - 6rem) min-content min-content 40vw repeat(
+		grid-template-rows: 6rem calc(92vh - 6rem) min-content min-content 55rem min-content repeat(
 				3,
 				min-content
 			);
